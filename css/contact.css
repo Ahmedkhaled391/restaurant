@@ -18,12 +18,17 @@ body {
     width: 40%;
     color: white;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    font-family:sans-serif;
 
 }
 
 .left h2 {
     font-weight: bold;
     margin-bottom: 20px;
+}
+.left span {
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .contactinfo i {
@@ -87,4 +92,19 @@ textarea {
 
 .mb-8{
     margin-bottom: 6rem;
+}
+@media (max-width: 800px) {
+  .inp1 {
+    flex-wrap: wrap !important; 
+    gap: 15px;                   
+  }
+
+  .inp1 .input-group-text {
+    width: 100%;
+    justify-content: center;    
+  }
+
+  .inp1 input {
+    width: 100% !important;
+  }
 }
