@@ -113,6 +113,10 @@
         content: url("../img/discount-img\ small.png");
 
     }
+
+    .about,.explore{
+        text-align: center;
+    }
 }
 
 
