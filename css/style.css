@@ -20,8 +20,9 @@
     color: #c27e26 !important;
 }
 .links .cart .cartList{
-    right: -100%;
+    right: 0;
     color: #c27e26 !important;
+    z-index: 5;
     hr{
         border: 1px solid black;
     }

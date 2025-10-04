@@ -7,7 +7,7 @@ if(localStorage.getItem("counter") == null){
 }
 
 // add to localStorage
-products.forEach((product)=>{
+products.forEach(product=>{
     product.addEventListener("click",(e)=>{
         e.preventDefault();
 
@@ -31,7 +31,7 @@ products.forEach((product)=>{
 })
 
 // view on click on cart icon
-cart.addEventListener("click",e =>{
+cart.addEventListener("click",e => {
     e.preventDefault();
 
     if(!cartList.classList.contains("d-none")){
@@ -41,30 +41,60 @@ cart.addEventListener("click",e =>{
     cartList.classList.remove("d-none");
     let total = 0;
 
-    for(let i =0;i<localStorage.length - 1;i++){
-        let obj = JSON.parse(localStorage[i]);
+    for (const key in localStorage) {
+        
+        if(!isNaN(key)){
+            let obj = JSON.parse(localStorage[key]);
 
-        total += +obj.price.split("$")[1];
+            total += +obj.price.split("$")[1];
 
-        addToCartView(obj);
+            addToCartView(obj,key);
+        }
+
     }
 
     let totalTag = document.createElement("div");
     totalTag.className = "text-nowrap text-center fs-5";
 
     totalTag.append(`Total : $${total}`);
-    cartList.append(totalTag)
+    cartList.append(totalTag);
+
+    // delete product
+    let del = document.querySelectorAll(`.delbtn`);
+    del.forEach((btn)=>{
+        btn.addEventListener("click",()=>{
+            localStorage.removeItem(btn.parentElement.id);
+            
+            let discount = +btn.parentElement.innerText.split("\n")[0].split(":")[1].split("$")[1];
+            
+            total -= discount;
+            totalTag.innerText = "";
+            totalTag.append(`Total : $${total}`);
+            cartList.append(totalTag);
+
+            btn.parentElement.nextElementSibling.remove();
+            btn.parentElement.remove();
+            
+            localStorage["counter"] -= 1;
+        });
+    })
 });
 
 // but data in suitable tags
-function addToCartView(data){
+function addToCartView(data,id){
     let div = document.createElement("div");
-    div.className = "text-nowrap fs-5"
+    div.className = "text-nowrap fs-5 d-flex justify-content-between gap-2 align-items-center"
+    div.id = id;
 
-    div.append(`${data.name} : ${data.price}`)
+    let delBtn = document.createElement("a");
+    delBtn.className= "btn btn-danger delbtn";
+    delBtn.append("Delete")
+
+    div.append(`${data.name} : ${data.price}`,delBtn)
 
     let hr = document.createElement(`hr`);
     hr.className = "m-2";
+
 
     cartList.append(div)
     cartList.append(hr)
