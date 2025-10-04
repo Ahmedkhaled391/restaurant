@@ -19,6 +19,13 @@
 .links .nav-link:hover{
     color: #c27e26 !important;
 }
+.links .cart .cartList{
+    right: -100%;
+    color: #c27e26 !important;
+    hr{
+        border: 1px solid black;
+    }
+}
 .land .main{
     position: absolute;
     top: calc(50% + 2rem) ;
