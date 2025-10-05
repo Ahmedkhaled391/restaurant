@@ -33,8 +33,8 @@ The site showcases the restaurant's menu, location, and online ordering system.
 - **JavaScript handles products cart addition and deletion and total price calculation.**
 
 ## 👤 Authors
-- [**Ahmed Khaled**](https://restaurant-phi-red.vercel.app/)
-- **Ahmed Mohamed Abo ziena**
-- **Faris Yahya**
-- **Ali Mohamed Ali**
+- [**Ahmed Khaled**](https://github.com/Ahmedkhaled391)
+- [**Ahmed Mohamed Abo ziena**](https://github.com/abouzeina)
+- [**Faris Yahya**](https://github.com/FarisFG2)
+- [**Ali Mohamed Ali**](https://github.com/Ali-Hegzy)
 
