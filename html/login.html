@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg position-fixed bg-dark z-3 w-100 navi">
+      <div class="container">
+        <a class="navbar-brand text-light fw-bolder" href="../index.html"
+          ><img src="../img/newLogoNBGsmaller.png" alt=""></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-danger page home"
+                aria-current="page"
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light page" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light page" href="#">Procuts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light page" href="#">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light page" href="#">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="login w-100 d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <form class="p-5 rounded shadow row gap-4 bg-black">
+        <h1 class="mt-0 text-light">Log in</h1>
+        <input
+          type="email"
+          placeholder="Email"
+          class="form-control bg-dark text-light"
+          id="email"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="form-control bg-dark text-light"
+          id="password"
+        />
+        <p class="text-light">
+          Don't have an account?<a href="./registration.html">Signup</a>
+        </p>
+        <button type="submit" class="btn btn-danger align-self-start col-3">
+          Log in
+        </button>
+      </form>
+    </div>
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <!-- Logo & Social -->
+          <div
+            class="col-lg-4 col-md-12 mb-4 d-flex flex-column align-items-md-start align-items-center"
+          >
+            <div class="logo-and-social mb-3 d-flex align-items-center">
+              <img
+                src="../img/newLogoNBGsmaller.png"
+                alt="Fast Food Logo"
+                class="me-2 restaurant-logo"
+              />
+              <h5 class="text-uppercase fw-bold m-0">Burger Restaurant</h5>
+            </div>
+
+            <h6 class="text-uppercase mb-3 mt-4">Follow us</h6>
+            <div class="social-links">
+              <a href="#" class="text-white me-3" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- About -->
+          <div class="col-lg-4 col-md-6 mb-4 about">
+            <h6 class="text-uppercase fw-bold mb-4 text-warning">About Us</h6>
+            <p><i class="fas fa-phone-alt me-2"></i> (02) 3338 1234</p>
+            <p>
+              <i class="fas fa-envelope me-2"></i> info@BurgerRestaurant.co.uk
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt me-2"></i> 29 El-Batal Ahmed Abdel
+              Aziz Street
+            </p>
+            <p>Mohandessin, Giza, Egypt</p>
+          </div>
+
+          <!-- Explore -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex flex-column gap-2 explore">
+            <h6 class="text-uppercase fw-bold mb-4 text-warning">Explore</h6>
+            <a href="#" class="text-white text-decoration-none">Home</a>
+            <a href="#" class="text-white text-decoration-none">Products</a>
+            <a href="#" class="text-white text-decoration-none">Contact Us</a>
+            <a href="#" class="text-white text-decoration-none">Careers</a>
+          </div>
+        </div>
+
+        <hr class="my-3 bg-secondary" />
+
+        <div class="text-center py-2">
+          &copy; 2025 Burgerland. All rights reserved |
+          <small>Design adapted from Roman, licensed under CC BY 4.0.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
