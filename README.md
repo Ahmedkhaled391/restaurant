@@ -7,7 +7,7 @@ The site showcases the restaurant's menu, location, and online ordering system.
 🔗 [Live Demo](https://restaurant-phi-red.vercel.app/)
 
 
-## 🛠️ Built With
+## 🛠️ Built With 
 - **HTML5** – for the structure  
 - **CSS3** & **Bootstrap 5** – for responsive design  
 - **JavaScript (ES6)** – for interactivity  
